@@ -37,6 +37,29 @@ RabbitMQ offers official Docker images with the management plugin included, whic
 docker pull rabbitmq:management
 ```
 
+## Step 3: Run RabbitMQ Container
+
+Run a RabbitMQ container with the following command. This setup includes the management interface:
+
+```bash
+docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
+```
+
+### Explanation of Docker Run Flags
+
+- `-d`: Run the container in **detached mode** (in the background), which means the Docker container runs in the background of your terminal. It does not receive input or display output unless you fetch the container logs.
+- `--name rabbitmq`: Assigns the container a name (`rabbitmq`), which can be used to reference the container within a Docker network or when starting and stopping the container.
+- `-p 5672:5672`: Maps port 5672 on the host to port 5672 in the container. This is the standard port for RabbitMQ's AMQP protocol, allowing applications on your host machine to communicate with RabbitMQ.
+- `-p 15672:15672`: Maps port 15672 on the host to port 15672 in the container. This port is used by RabbitMQ's management plugin, which provides a web-based UI accessible at `http://localhost:15672`.
+
+
+## Step 4: Verify the Container is Running
+
+To check that the RabbitMQ container is successfully running, execute the following command:
+
+```bash
+docker ps
+
 
 
 
