@@ -59,7 +59,7 @@ To check that the RabbitMQ container is successfully running, execute the follow
 
 ```bash
 docker ps
-
+```
 
 
 
