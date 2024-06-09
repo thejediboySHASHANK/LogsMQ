@@ -35,7 +35,7 @@ RabbitMQ offers official Docker images with the management plugin included, whic
 
 ```bash
 docker pull rabbitmq:management
-
+```
 
 
 
